@@ -1,0 +1,16 @@
+{
+  "name": "complete",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"yarn client\" \"yarn server\"",
+    "test": "test",
+    "client": "cd client && yarn start",
+    "server": "cd server && tsc && node ./dist/app.js"
+  },
+  "author": "Devon Thomassen",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
