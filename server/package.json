@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Devon Thomassen",
+  "license": "MIT",
+  "dependencies": {
+    "@types/dotenv": "^6.1.0",
+    "@types/xml2js": "^0.4.3",
+    "dotenv": "^6.2.0",
+    "xml2js": "^0.4.19"
+  }
+}
