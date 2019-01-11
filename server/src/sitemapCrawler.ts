@@ -1,12 +1,11 @@
+import HttpClient from './httpClient';
+import HttpResult from './httpResult';
+import { parseString as ParseStr } from 'xml2js';
 import Sitemap from './sitemap';
 import SitemapIndex from './sitemapIndex';
-import Doc from './document';
-import { parseString as ParseStr } from 'xml2js';
-import HttpClient from './httpClient';
-import HttpRequest from './httpRequest';
-import HttpResult from './httpResult';
 
 class SitemapCrawler {
+  
   client: HttpClient;
   onComplete: Function;
   operations: number;

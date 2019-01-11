@@ -10,7 +10,7 @@ import * as Https from 'https';
 import { performance } from 'perf_hooks';
 
 class HttpClient {
-
+  
   username: string;
   password: string;
   requests: HttpRequest[];

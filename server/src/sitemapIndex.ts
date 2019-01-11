@@ -1,5 +1,7 @@
 class SitemapIndex {
+  
   urls: string[];
+  
   constructor(urls: string[]) {
     this.urls = urls
   }

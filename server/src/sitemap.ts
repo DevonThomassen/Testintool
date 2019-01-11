@@ -2,12 +2,14 @@ import Doc from './document';
 import Img from './image';
 
 class Sitemap {
+  
   documents: Doc[];
+  
   constructor(documents: Doc[]) {
     this.documents = documents;
   }
 
-  static fromData(data: any) : Sitemap | null {
+  static fromData(data: any): Sitemap | null {
     if (!data || !data.urlset || !data.urlset.url) {
       return null;
     }
@@ -20,7 +22,7 @@ class Sitemap {
         : [];
       return new Doc(url.loc[0], images);
     });
-
+    
     return new Sitemap(urls);
   }
 }

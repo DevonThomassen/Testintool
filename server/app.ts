@@ -17,7 +17,7 @@ const defaultPort: number = 80,
 
 Http.createServer((req: IncomingMessage, res: ServerResponse) => {
   const data = Url.parse(req.url, true).query;
-  const user = new User(`data.user`, `data.pass`);
+  const user = new User(data.user, data.pass);
 
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.writeHead(200, { "Content-Type": "application/json" });

@@ -1,9 +1,10 @@
 class HttpResult {
+  
   url: string;
   statusCode: number;
   milliseconds: number;
   body: string;
-  mixedContent: boolean;
+  mixedContent: boolean | null;
 
   constructor(url: string, statusCode: number, milliseconds: number, body: string) {
     this.url = url;
