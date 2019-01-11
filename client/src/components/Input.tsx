@@ -9,6 +9,7 @@ interface State {
   results: CResult[];
   errors: string[];
   metrics: CMetrics;
+  port: number;
 }
 
 class Input extends React.Component<{}, State> {
@@ -21,7 +22,8 @@ class Input extends React.Component<{}, State> {
       time: 0,
       results: 0,
       errors: 0
-    }
+    },
+    port: 8080
   }
 
   private apiRequest = (evt: React.FormEvent<HTMLFormElement>) => {
@@ -35,7 +37,7 @@ class Input extends React.Component<{}, State> {
     const url = $('url').value;
     const user = $('user').value;
     const pass = $('pass').value;
-    const apiUrl = encodeURI(`http://localhost:80?url=${url}&user=${user}&pass=${pass}`);
+    const apiUrl = encodeURI(`http://localhost:${this.state.port}?url=${url}&user=${user}&pass=${pass}`);
     console.log(apiUrl);
 
     const self = this;
