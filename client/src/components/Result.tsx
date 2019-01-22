@@ -10,7 +10,7 @@ class Result extends React.Component<Props, {}> {
   public render() {
     return (
       <React.Fragment>
-        <div className="row">
+        <div className={"row " + (this.props.result.mixedContent ? "mixedContent" : "")}>
           <div className="cell">{this.props.result.num}</div>
           <div className="cell">{this.props.result.url}</div>
           <div className={"cell " + (Math.floor(this.props.result.statusCode / 100) === 2 ? 'good' : 'bad')}>
